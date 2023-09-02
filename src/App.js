@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import CommentList from "./components/commentList";
+import PostDetail from "./components/postDetails";
 
 function App() {
+  const [selectedPostId, setSelectedPostId] = useState(null);
+
+  const handleSelectPost = (postId) => {
+    setSelectedPostId(postId);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="border border-x-neutral-950 rounded-lg bg-rose-50 p-4 m-4 flex overflow-hidden md:flex-row">
+      <PostDetail onSelectPost={handleSelectPost} />
+      <CommentList postId={selectedPostId} />
     </div>
   );
 }

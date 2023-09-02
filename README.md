@@ -1,5 +1,10 @@
-# Getting Started with Create React App
+# Comments Filter App Using React Component
+This is creating a React application that fetches 100 comments from a public API, displays the first comment associated with each post as if it were the post itself on the left side, and allows users to filter these "posts" by their postId. Clicking on a "post" should display its associated comments on the right side. Both the left and right sides should be scrollable to accommodate large datasets.
 
+## Credits
+This project was created by [AAKASH YADAV](https://github.com/AAKASH-YADAV-CODER/comments-filter-app.git).
+
+## Default Description or Documentation of React 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
